@@ -1,7 +1,9 @@
 <?php
 
-$host = "aws-0-us-east-1.pooler.supabase.com";
-$port = "5432";
-$dbname = "postgres";
-$user = "postgres.xxxxxxxxx";
-$password = "SUA_SENHA";
+$env = parse_ini_file(__DIR__ . '/../.env');
+
+$host = $env['DB_HOST'];
+$port = $env['DB_PORT'];
+$dbname = $env['DB_NAME'];
+$user = $env['DB_USER'];
+$password = $env['DB_PASSWORD'];
